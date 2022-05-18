@@ -1,0 +1,28 @@
+server:
+    port: 8080 # 伺服器的port號
+spring:
+  h2:
+    console:
+      enabled: true
+  thymeleaf:
+    # 在構建URL時用於檢視名稱的字首，預設為classpath:/templates/
+    prefix: classpath:/templates/
+    # 在構建URL時附加到檢視名稱的字尾，預設為.html
+    suffix: .html
+    # 模板模式，預設為HTML
+    mode: HTML
+    # 模板檔案編碼，預設為UTF-8
+    encoding: UTF-8
+    # 是否啟用模板快取，預設為true，表示啟用，false不啟用
+    cache: false
+    # 在呈現模板之前是否檢查模板存在與否，預設為true
+    check-template: true
+    # 是否檢查模板位置存在與否，預設為true
+    check-template-location: true
+  
+  datasource:
+    url: jdbc:h2:mem:demo # h2 database 連接位址
+    driver-class-name: org.h2.Driver # 配置driver
+    username: sa # database 用戶名
+    password:  # database 密碼
+  
